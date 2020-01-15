@@ -1,6 +1,8 @@
 # Library database
 ![Diagram](library-diagram.svg)
-## Steps
+## Development Steps:
 * Diagram entities
 * Diagram entity relationships
 * Database & user/role setup
+* Create tables
+* Generate table data

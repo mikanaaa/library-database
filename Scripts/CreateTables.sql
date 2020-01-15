@@ -24,22 +24,22 @@ CREATE TABLE member
 CREATE TABLE book
 (
   ISBN VARCHAR(50) PRIMARY KEY,
-  id_author INT REFERENCES author(id),
+  id_author INT REFERENCES author(id) ON DELETE CASCADE ON UPDATE CASCADE,
   title VARCHAR(50),
   pages INT
 );
 CREATE TABLE copy
 (
   id SERIAL PRIMARY KEY,
-  id_book VARCHAR(50) REFERENCES book(ISBN),
-  id_library INT REFERENCES library(id),
+  id_book VARCHAR(50) REFERENCES book(ISBN) ON DELETE CASCADE ON UPDATE CASCADE,
+  id_library INT REFERENCES library(id) ON DELETE CASCADE ON UPDATE CASCADE,
   price DECIMAL(12,2),
   state VARCHAR(50)
 );
 CREATE TABLE borrow
 (
-  id_copy INT REFERENCES copy(id),
-  id_member INT REFERENCES member(id),
+  id_copy INT REFERENCES copy(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  id_member INT REFERENCES member(id) ON DELETE CASCADE ON UPDATE CASCADE,
   taken DATE,
   returned DATE
 );
