@@ -28,18 +28,18 @@ CREATE TABLE book
   title VARCHAR(50),
   pages INT
 );
+CREATE TABLE copy
+(
+  id SERIAL PRIMARY KEY,
+  id_book VARCHAR(50) REFERENCES book(ISBN),
+  id_library INT REFERENCES library(id),
+  price DECIMAL(12,2),
+  state VARCHAR(50)
+);
 CREATE TABLE borrow
 (
   id_copy INT REFERENCES copy(id),
   id_member INT REFERENCES member(id),
   taken DATE,
   returned DATE
-);
-CREATE TABLE copy
-(
-  id SERIAL PRIMARY KEY,
-  id_book VARCHAR(50) REFERENCES book(ISBN),
-  id_libary INT REFERENCES library(id),
-  price DECIMAL(12,2),
-  state VARCHAR(50)
 );
