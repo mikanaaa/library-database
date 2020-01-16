@@ -1,3 +1,4 @@
+\c library;
 CREATE TABLE author
 (
   id SERIAL PRIMARY KEY,

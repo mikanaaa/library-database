@@ -1,0 +1,1 @@
+CREATE DATABASE library with OWNER = postgres;

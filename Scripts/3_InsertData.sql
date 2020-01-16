@@ -1,3 +1,4 @@
+\c library;
 -- Insert authors
 COPY author(id,firstname,lastname,age) 
 FROM '/tmp/Author.csv' DELIMITER ',' CSV HEADER;
