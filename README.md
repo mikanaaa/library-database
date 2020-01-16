@@ -1,5 +1,5 @@
 # Library database
-Main purpose of this project was to practice designing database schema using entity relational diagram & later implementing that specification in PostgreSQL & deployment with Docker.
+Main purpose of this project was to practice designing database schema using entity relationships diagram & later implementing that specification within PostgreSQL & deployment with Docker.
 <br>
 ![Diagram](library-diagram.svg)
 ## Development Steps:
@@ -8,7 +8,7 @@ Main purpose of this project was to practice designing database schema using ent
 * Database & user/role setup
 * Create tables
 * Generate table data
-* Setup Docker image
+* Setup Docker deployment
 
 ## Installation
 * Make sure that Docker is installed
